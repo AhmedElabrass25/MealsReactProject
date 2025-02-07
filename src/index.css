@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", serif;
+}
+
+body {
+  font-family: "Comfortaa", serif;
+  background-color: #d8d8d7;
+}
+
+/* Loading */
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #000000a3;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #fff #fff transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #ff3d00 #ff3d00;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #fff #fff transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* >>>>>>>>> */
+
+section {
+  padding-bottom: 140px;
+}
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background-color: rgb(243, 243, 243);
+}
+
+.navbar-brand img,
+footer img {
+  width: 100px !important;
+}
+
+@media (max-width: 450px) {
+  .navbar-brand img {
+    width: 100% !important;
+  }
+}
+
+/*>>>>>>>Display Meals  */
+
+.mealSec {
+  background-color: #f4f2ee;
+}
+
+.mealSec .title {
+  color: #e36c3c;
+}
+
+.mealSec .mealCard {
+  padding: 15px;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.4s ease;
+}
+
+.mealSec .mealCard:hover {
+  transform: scale(1.1);
+}
+
+.mealSec .mealCard img {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.mealSec .mealCard:hover img {
+  transform: rotate(270deg);
+}
+
+.mealSec .mealCard h4 {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mealSec .mealCard .city {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #21ba75;
+}
+
+.mealSec .mealCard a {
+  border-radius: 30px;
+  width: fit-content;
+  background-color: #21ba75 !important;
+  color: #fff;
+  text-transform: capitalize;
+  margin: 10px 0px;
+}
+
+.lists {
+  border-bottom: 1px solid lightgray;
+}
+
+.lists p {
+  border: 0.5px solid rgba(0, 0, 0, 0.444);
+  cursor: pointer;
+  background-color: #f4f2ee;
+  color: #484847;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.lists p:hover {
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Details page */
+
+.proDetailsSec img {
+  transition: all 0.5s ease;
+}
+
+.proDetailsSec img:hover {
+  transform: scale(1.1);
+  transform: rotate(360deg);
+}
+
+.proDetailsSec .description {
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+}
+
+.proDetailsSec .ingredients {
+  text-align: center;
+  background-color: #fff;
+  padding: 15px 10px;
+  border-radius: 7px;
+}
+
+.proDetailsSec .ingredients h3 {
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 20px;
+}
+
+.proDetailsSec .ingredients .details {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 15px;
+}
+
+.proDetailsSec .ingredients .details p {
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+/* >.Footer> */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f3f3f3;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  color: #222;
+}
