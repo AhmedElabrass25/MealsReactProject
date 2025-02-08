@@ -68,7 +68,7 @@ const App = () => {
           />
         </Routes>
         <Footer />
-      </hash>
+      </HashRouter>
     </div>
   );
 };
