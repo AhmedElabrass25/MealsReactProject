@@ -6,7 +6,9 @@ import Loading from "./Loading";
 const Home = ({ getProducts, setProducts, products, loading, setLoading }) => {
   const [lists, setLists] = useState([]);
   const [activeItem, setActiveItem] = useState("All");
-  //   >>>>>>>>>>>>>>>>>>Get Meal Lists
+  //  <<<<<<<<<<<<<<<<<<<
+  // Get Meal Lists
+  // >>>>>>>>>>>>>>>>>>>>
   async function getMealLists() {
     try {
       setLoading(true);
@@ -22,7 +24,9 @@ const Home = ({ getProducts, setProducts, products, loading, setLoading }) => {
       setLoading(false);
     }
   }
-  //   >>>>>>>>>>>>>>>>>>Filter Meal by Category
+  //  <<<<<<<<<<<<<<<<
+  //  Filter Meal by Category
+  // >>>>>>>>>>>>>>>>>>
   async function filterMealByCategory(category) {
     try {
       setLoading(true);
@@ -45,11 +49,12 @@ const Home = ({ getProducts, setProducts, products, loading, setLoading }) => {
   return (
     <section className="mealSec pt-5 mt-5">
       <div className="container">
+        {/* <<<<<< Page  Title >>>>>>>>>>*/}
         <h1 className="title my-5 w-100 text-center fw-bold">
           Learn, Cook, Eat Your Food
         </h1>
         {loading && <Loading />}
-        {/* >>>>>All Categories>>>>>>>>> */}
+        {/* <<<<<<<< Display All Categories >>>>>>>>> */}
         <div className="lists row w-100 gap-3 justify-content-center mb-5 ">
           <p
             onClick={() => {
@@ -80,9 +85,9 @@ const Home = ({ getProducts, setProducts, products, loading, setLoading }) => {
               );
             })}
         </div>
-        {/* >>>>>Meals>>>>>>>>> */}
+        {/*  <<<<<<<< Display Meals >>>>>>>>> */}
         {loading && <Loading />}
-        <div className="row justify-content-between mt-3">
+        <div className="the-card row justify-content-between mt-3">
           {products?.length > 0 &&
             products?.map((pro) => {
               return (
@@ -91,7 +96,7 @@ const Home = ({ getProducts, setProducts, products, loading, setLoading }) => {
                     <div className="imgDiv w-100 text-center mb-3">
                       <img src={pro?.strMealThumb} className="w-100" alt="" />
                     </div>
-                    <h5 className="mb-1 fw-bold">
+                    <h5 className="mb-1 fw-bold w-100 text-center">
                       {pro?.strMeal.split(" ").slice(0, 2).join(" ")}
                     </h5>
                     {pro?.strArea && (

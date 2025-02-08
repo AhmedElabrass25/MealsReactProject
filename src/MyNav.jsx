@@ -6,7 +6,7 @@ const MyNav = ({ setWord, SearchByWord }) => {
     SearchByWord();
   }
   return (
-    <nav className="navbar navbar-expand-lg shadow-lg">
+    <nav className="navbar navbar-expand-lg shadow-sm">
       <div className="container w-100">
         <div className="row w-100 align-items-center">
           {/* Logo image */}

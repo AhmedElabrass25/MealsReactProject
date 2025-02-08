@@ -7,7 +7,7 @@
 
 body {
   font-family: "Comfortaa", serif;
-  background-color: #d8d8d7;
+  background-color: #f4f2ee;
 }
 
 /* Loading */
@@ -107,13 +107,7 @@ section {
 
 .navbar-brand img,
 footer img {
-  width: 100px !important;
-}
-
-@media (max-width: 450px) {
-  .navbar-brand img {
-    width: 100% !important;
-  }
+  width: 80px !important;
 }
 
 /*>>>>>>>Display Meals  */
@@ -175,6 +169,10 @@ footer img {
   margin: 10px 0px;
 }
 
+.mealSec .the-card h5 {
+  font-size: 18px;
+}
+
 .lists {
   border-bottom: 1px solid lightgray;
 }
@@ -200,7 +198,16 @@ footer img {
 
 .proDetailsSec img:hover {
   transform: scale(1.1);
-  transform: rotate(360deg);
+}
+
+.proDetailsSec .descSide h3 {
+  font-size: 22px;
+  padding: 6px 8px;
+  border: 2px solid rgba(211, 211, 211, 0.558);
+  margin-bottom: 20px;
+  border-radius: 6px;
+  color: rgb(40, 40, 40);
+  font-weight: 600;
 }
 
 .proDetailsSec .description {
@@ -234,7 +241,9 @@ footer img {
   font-weight: bold;
 }
 
-/* >.Footer> */
+/* <<<<<<<<<<
++++++++( Footer )
+>>>>>>>>>>>>> */
 
 footer {
   position: fixed;
@@ -245,4 +254,21 @@ footer {
   text-align: center;
   padding: 10px;
   color: #222;
+}
+
+footer p {
+  font-size: 17px;
+}
+
+/* <<<<<<<<<<<<<
++++++++ (Media Query)
+>>>>>>>>>>> */
+
+@media (max-width: 450px) {
+  .navbar-brand img {
+    width: 100% !important;
+  }
+  footer p {
+    font-size: 13px;
+  }
 }

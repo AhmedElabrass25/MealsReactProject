@@ -75,8 +75,10 @@ const ProductDetails = ({ loading, setLoading }) => {
             </div>
           </div>
           {/* Description */}
-          <div className="col-lg-4 col-md-6 col-12 mb-5">
-            <h3>Cooking Instructions : </h3>
+          <div className=" descSide col-lg-4 col-md-6 col-12 mb-5">
+            <h3 className="w-full text-center shadow-sm">
+              Cooking Instructions{" "}
+            </h3>
             <div className="w-100">
               <p className="description">{product?.strInstructions}</p>
             </div>
