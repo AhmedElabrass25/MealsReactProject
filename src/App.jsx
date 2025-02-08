@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import ProductDetails from "./ProductDetails";
 import MyNav from "./MyNav";
@@ -44,7 +44,7 @@ const App = () => {
   }
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <MyNav setWord={setWord} SearchByWord={SearchByWord} />
         <Toaster />
         <Routes>
@@ -68,7 +68,7 @@ const App = () => {
           />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </hash>
     </div>
   );
 };
